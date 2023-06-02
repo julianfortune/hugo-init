@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /* Override `prose` >>> */
+
+    /* Add rounded background to in-line code (p>pre) */
+    .prose :where(code):not(:where([class~="not-prose"] *)) {
+        @apply rounded px-0.5 bg-neutral-200 dark:bg-neutral-700 ;
+    }
+
+    /* Disable tailwind prose adding backticks */
+    .prose :where(code):not(:where([class~="not-prose"] *))::before {
+        content: "" !important;
+    }
+
+    /* Disable tailwind prose adding backticks */
+    .prose :where(code):not(:where([class~="not-prose"] *))::after {
+        content: "" !important;
+    }
+
+    .prose a {
+        @apply text-sky-600 dark:text-sky-300
+    }
+
+    /* <<< */
+}

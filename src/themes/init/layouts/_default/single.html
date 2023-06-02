@@ -3,7 +3,9 @@
 {{ end }}
 
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <article class="prose prose-neutral dark:prose-invert">
+    <h1>{{ .Title }}</h1>
 
-  {{ .Content }}
+    {{ .Content }}
+  </article>
 {{ end }}

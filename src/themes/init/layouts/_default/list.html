@@ -1,11 +1,14 @@
 {{ define "main" }}
-  <h1>Posts</h1>
+  <div class="prose pb-8">
+    <h1>Posts</h1>
+  </div>
 
-  {{ range .Pages }}
-  <article>
-    <h2>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h2>
-  </article>
-  {{ end }}
+  <ol>
+    {{ range .Pages }}
+      <li class="prose">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ol>
+
 {{ end }}

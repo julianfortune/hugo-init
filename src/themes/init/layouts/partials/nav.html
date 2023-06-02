@@ -1,10 +1,15 @@
 <header>
-  <nav class="site-nav">
-    <a class="logo" href="{{ .Site.BaseURL }}">
+  {{/* Navigation */}}
+  <nav class="flex-col space-y-1">
+    <h1 class="text-2xl font-bold">
+      <a
+      class=""
+      href="{{ .Site.BaseURL }}">
       {{ .Site.Title }}
-    </a>
+      </a>
+    </h1>
 
-    <ul>
+    <ul class="flex space-x-2">
       {{ range .Site.Menus.main -}}
       <li>
         <a href="{{ .URL }}">{{ .Name }}</a>
@@ -12,4 +17,10 @@
       {{- end }}
     </ul>
   </nav>
+
+  {{/* Horizontal divider */}}
+  <div class="pt-2 pb-4">
+    <hr>
+  </div>
+
 </header>
