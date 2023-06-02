@@ -1,0 +1,14 @@
+# Use a `src` folder layout
+archetypeDir: "src/archetypes"
+assetDir: "src/assets"
+contentDir: "src/content"
+dataDir: "src/data"
+layoutDir: "src/layouts"
+staticDir: "src/static"
+themesDir: "src/themes"
+
+# Site configuration
+title: "Example Site"
+languageCode: "en-us"
+baseURL: "http://example.org/"
+theme: "init" # Defined in `src/themes/init`
